@@ -29,7 +29,7 @@ The goals / steps of this project are the following:
 
 
 
-###1. Camera Calibration
+### 1. Camera Calibration
 
 
 
@@ -44,7 +44,7 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 ![alt text][image1]
 
 
-####2.Color and gradient pipeline
+#### 2.Color and gradient pipeline
 The pipeline to get the binary image uses a combination of histogram equalization , filtering and a dilation to get more points of the binary image
 
 ```python 
@@ -185,7 +185,7 @@ def find_lanes_points(left_fit, right_fit, binary_warped, margin=13):
 ![alt text][image6]
 
 
-####5.Curvature and Center Calculation 
+#### 5.Curvature and Center Calculation 
 
 I used calculation method proposed in the lessons, the code can be found in the functions above in `proc.py` file
 ```python
@@ -197,7 +197,7 @@ def calc_center(leftx, rightx, warped):
 ```  
 in file in `proc.py`
 
-####6.Final Results
+#### 6.Final Results
 
 
 Can be seen in the videos bellow
@@ -207,7 +207,7 @@ Can be seen in the videos bellow
 
 ---
 
-###Discussion
+### Discussion
 The final results are good but it still perform poorly in the hard challenge video.
 The approach using a window  with points from last n frames to smooth 
 the results and small constant in the error will likely fail if the car ran faster and consequently lanes varies rapidly. Using a convolution the find the lanes do not  function if there is large area with noise. The algorithm will pick this area instead of the lanes.

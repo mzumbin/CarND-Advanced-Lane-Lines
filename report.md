@@ -202,7 +202,7 @@ in file in `proc.py`
 
 Can be seen in the videos bellow
 
- [project video result](./project_output.avi)
+ [project video result](https://youtu.be/aun2H34ZlKs)
  [challenge video result](./challenge_output.avi)
 
 ---

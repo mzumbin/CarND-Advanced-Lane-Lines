@@ -77,7 +77,7 @@ Here's an example of my output for this step.
 
 ![alt text][image3]
 
-####3. Perspective Transform
+#### 3. Perspective Transform
 
 The code to find a perspective transform need a picture with two parallel land lines to find the transform. The method works fitting two lines and find a point where they intercept, then a trapezoid is build as code above expose:  
 
@@ -124,14 +124,14 @@ I verified that my perspective transform was working as expected by warping an i
 
 ![alt text][image4]
 
-####4. Finding the Lanes and Fitting a polynomial
+#### 4. Finding the Lanes and Fitting a polynomial
 
 First the land finding algorithm uses a variation of convolution lane proposed in the lessons. The function return the points contained in the bins, another modification is that, the bin stays foot if number of points do not reach threshold. This points are fitted using a robust least squares using the Cauchy loss function.  The code for search the centroid bins is the function in proc.py file.
 ```
 def find_window_centroids(warped, window_width, window_height, margin):
 ```
 
-**output from convolution search**
+** output from convolution search **
 ![alt text][image5]
 
 
@@ -179,7 +179,7 @@ Code for finding with previous polynomial is in file `connected.py`
 *** above an exemple of a polynomial fitted and points used from small area around last fitted polynomial.***
 
 code in proc.py
-```
+```python
 def find_lanes_points(left_fit, right_fit, binary_warped, margin=13):
 ```
 ![alt text][image6]
